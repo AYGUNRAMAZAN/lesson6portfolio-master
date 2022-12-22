@@ -35,7 +35,7 @@ body{
     color: var(--text-color);
 }
 
-header{
+ header{
     position: sticky;
     right: 0;
     top: 0;
@@ -45,7 +45,7 @@ header{
     align-items: center;
     justify-content: space-between;
     background: transparent;
-    padding: 25px 15%;
+    padding: 25px 15%; 
     
 }
 
@@ -195,7 +195,8 @@ header.sticky{
 
 .services-content{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    /**grid-template-columns: repeat(3,1fr);**/
+    grid-template-columns: repeat(auto-fit, minmax(300px,auto));
     align-items: center;
     text-align: center;
     gap: 1.5rem;
@@ -230,6 +231,50 @@ header.sticky{
 
 .box:hover h3{
     color: var(--primary-color);
+}
+
+@media (min-width: 300px) and (max-width: 475px){
+    :root{
+        --bg-color: rgb(234, 184, 184);
+        --text-color: rgb(104, 89, 89);
+        --h1-font: 4rem;
+        --h2-font: 2.5rem;
+        --h5-font: 1.2rem;
+        --p-font: 0.8rem;
+    }  
+}
+
+@media (min-width:600px) and (max-width:768px){
+    .navbar a{
+        background-color: aqua;
+        display: block;
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    :root{
+        --h1-font: 4.5rem;
+        --h2-font: 2.8rem;
+        --bg-color: rgb(80, 19, 149);
+        --h5-font: 1.5rem;
+    }
+
+    section{
+       
+        padding: 100px 15% 90px;
+    }
+
+}
+
+@media (min-width:768px) and (max-width:1440px){
+    section{
+        padding: 120px 10% 90px;
+    }
+    :root{
+        --h1-font: 4rem;
+        --h2-font: 3.2rem;
+
+    }
 }
 
 
